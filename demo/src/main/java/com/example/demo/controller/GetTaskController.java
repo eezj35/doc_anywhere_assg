@@ -32,7 +32,7 @@ public class GetTaskController {
     }
 
     @GetMapping("/tasks/{id}")
-    public ResponseEntity<?> getSpecificTask(@PathVariable int id) {
+    public ResponseEntity<?> getSpecificTask(@PathVariable Long id) {
         try {
             return ResponseEntity.ok().body(getTaskService.getSpecificTask(id));
         } catch (InvalidIdException e) {

@@ -17,10 +17,10 @@ public class GetTaskService {
         return db.getTasks();
     }
 
-    public Task getSpecificTask(int id) throws InvalidIdException {
+    public Task getSpecificTask(Long id) throws InvalidIdException {
         if (db.getTasks().size() <= id || id < 0) {
             throw new InvalidIdException("Invalid ID!");
         }
-        return db.getTasks().get(id);
+        return db.getTasks().get(id.intValue());
     }
 }
