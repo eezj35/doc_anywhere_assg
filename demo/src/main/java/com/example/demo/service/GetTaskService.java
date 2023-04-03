@@ -14,7 +14,7 @@ public class GetTaskService {
     Database db = Database.db;
 
     public ArrayList<Task> getTask() {
-        return Database.db.getTasks();
+        return db.getTasks();
     }
 
     public Task getSpecificTask(int id) throws InvalidIdException {

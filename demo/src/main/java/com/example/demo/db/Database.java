@@ -9,7 +9,6 @@ public class Database {
     public static Database db = new Database();
 
     private Database() {
-        tasks.add(new Task(Long.valueOf(1), "test", "test", true));
     }
 
     public ArrayList<Task> getTasks() {

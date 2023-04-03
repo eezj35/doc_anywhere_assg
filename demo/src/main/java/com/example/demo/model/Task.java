@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import lombok.Data;
+
 public class Task {
     Long id;
     String title;
