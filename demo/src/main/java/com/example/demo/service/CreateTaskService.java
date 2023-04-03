@@ -12,7 +12,7 @@ public class CreateTaskService {
     public String createTask(String title, String description, Boolean completed) {
         Task task = new Task(Long.valueOf(db.getTasks().size()), title, description, completed);
         db.getTasks().add(task);
-        return "Created Task -> " + task.toString();
+        return ">>> Created Task: " + task.toString();
     }
 
 

@@ -12,16 +12,12 @@ import java.util.ArrayList;
 public class UpdateTaskService {
     Database db = Database.db;
 
-    public ArrayList<Task> getTask() {
-        return db.getTasks();
-    }
-
     public String updateTask(Long id,
                            @Nullable String title,
                            @Nullable String description,
                            @Nullable Boolean completed) throws InvalidIdException {
         if (db.getTasks().size() <= id || id < 0) {
-            throw new InvalidIdException("Invalid ID!");
+            throw new InvalidIdException("Invalid ID! ID does not exist in database; Update operation aborted");
         }
 
         Task taskToUpdate = db.getTasks().get(id.intValue());
@@ -35,7 +31,7 @@ public class UpdateTaskService {
             taskToUpdate.setCompleted(completed);
         }
 
-        return "Task updated -> " + taskToUpdate.toString();
+        return ">>> Task updated: " + taskToUpdate.toString();
 
     }
 }

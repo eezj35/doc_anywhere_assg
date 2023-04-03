@@ -19,7 +19,7 @@ public class GetTaskService {
 
     public Task getSpecificTask(Long id) throws InvalidIdException {
         if (db.getTasks().size() <= id || id < 0) {
-            throw new InvalidIdException("Invalid ID!");
+            throw new InvalidIdException("Invalid ID! ID does not exist in database; get operation aborted.");
         }
         return db.getTasks().get(id.intValue());
     }
