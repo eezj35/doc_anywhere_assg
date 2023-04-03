@@ -19,9 +19,8 @@ public class GetTaskService {
 
     public Task getSpecificTask(int id) throws InvalidIdException {
         if (db.getTasks().size() <= id || id < 0) {
-            throw new InvalidIdException("Invalid ID");
+            throw new InvalidIdException("Invalid ID!");
         }
-
         return db.getTasks().get(id);
     }
 }
