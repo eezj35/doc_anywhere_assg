@@ -7,7 +7,7 @@ This is a task handler API implemented with basic CRUD functions. It is built wi
 2. Build the gradle application.
 3. Go to the "DemoApplication.java" file under "src/main/java/com/example/demo" which contains the main method to start the application, and click the green arrow on
 the left side margin to run the application.
-4. Use postman to tap into the endpoints and test the application. The application runs on localhost 8080.
+4. Use postman to tap into the endpoints and test the application. The application runs on "https://localhost:8080".
 
 ### Assumptions made
 
